@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/com/sina/sae/cloudservice/Utils.java=GBK
+encoding//src/com/sina/sae/cloudservice/web/Auth.java=GBK
+encoding//src/com/sina/sae/cloudservice/web/DBRest.java=GBK
+encoding//src/com/sina/sae/cloudservice/web/FileRest.java=GBK
+encoding//src/com/sina/sae/cloudservice/web/MailRest.java=GBK
+encoding//src/com/sina/sae/cloudservice/web/ObjectRest.java=GBK
+encoding/<project>=UTF-8

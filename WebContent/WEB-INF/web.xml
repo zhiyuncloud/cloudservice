@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>cloudservice</display-name>
+   <filter>
+    <filter-name>auth</filter-name>
+    <filter-class>com.sina.sae.cloudservice.web.Auth</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>auth</filter-name>
+    <url-pattern>/manager/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>auth</filter-name>
+    <url-pattern>/api/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <servlet-name>object</servlet-name>
+    <servlet-class>com.sina.sae.cloudservice.web.ObjectRest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>object</servlet-name>
+    <url-pattern>/api/object</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>db</servlet-name>
+    <servlet-class>com.sina.sae.cloudservice.web.DBRest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>db</servlet-name>
+    <url-pattern>/api/db</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>file</servlet-name>
+    <servlet-class>com.sina.sae.cloudservice.web.FileRest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>file</servlet-name>
+    <url-pattern>/api/file</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>mail</servlet-name>
+    <servlet-class>com.sina.sae.cloudservice.web.MailRest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>mail</servlet-name>
+    <url-pattern>/api/mail</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>manager/login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
