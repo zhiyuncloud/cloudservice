@@ -48,7 +48,6 @@
 		String sk = request.getParameter("sk");
 		if(SaeUserInfo.getAccessKey().equals(ak)&&SaeUserInfo.getSecretKey().equals(sk)){
 			session.setAttribute("user", ak+"_"+sk);
-			System.out.println(session.getAttribute("user"));
 			response.sendRedirect("app.jsp");
 		}
 	%>
