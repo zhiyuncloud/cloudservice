@@ -41,7 +41,7 @@
    		pc = Integer.parseInt(pagecount);
    	}catch(Exception e ){}
     List<Map<String,String>> list = new ArrayList<Map<String,String>>();
-	String sql = "SELECT DISTINCT (viewid) as view, COUNT( viewid ) as count,  seconds FROM  statistic_stay GROUP BY viewid limit ?,10";
+	String sql = "SELECT DISTINCT (viewid) as view, COUNT( viewid ) as count,  SUM(seconds) as second FROM  statistic_stay GROUP BY viewid limit ?,10";
     Connection con = null;
 	ResultSet rs = null;
 	PreparedStatement ps = null;
@@ -58,7 +58,7 @@
 			row.put("index", ""+count++);
 			row.put("view", rs.getString("view"));
 			row.put("count", rs.getString("count"));
-			row.put("seconds", rs.getInt("seconds")+"");
+			row.put("seconds", rs.getInt("second")+"");
 			list.add(row);
 		}
 	}catch(Exception e){
