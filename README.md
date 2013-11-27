@@ -7,4 +7,8 @@ cloudservice
 
 项目包含了一些服务数据管理的页面，可供用户管理服务端的数据，同时提供了一些简单的统计功能（如有需要可以到SAE应用管理面板体验更强大的应用管理功能）。
 
+项目主站(包含详细文档)：http://cloudbaas.sinaapp.com
+
 应用范例地址为：http://jeebaas.sinaapp.com
+
+有任何问题请第一时间联系我 zhiyun.cloud@gmail.com @智云同学
